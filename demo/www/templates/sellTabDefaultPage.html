@@ -14,11 +14,11 @@
                 </label>
                 <label class="item item-input " id="sellTabDefaultPage-input1" name="Item">
                     <span class="input-label">Item Name</span>
-                    <input type="text" placeholder="what are you selling?">
+                    <input type="text" placeholder="what are you selling?" ng-model="input.name">
                 </label>
                 <label class="item item-input " id="sellTabDefaultPage-input3" name="Date">
                     <span class="input-label">Show Date</span>
-                    <input type="date" placeholder="when is the Show?">
+                    <input type="date" placeholder="when is the Show?" ng-model="input.date">
                 </label>
                 <label class="item item-input " id="sellTabDefaultPage-input7" name="Time">
                     <span class="input-label">Show Time</span>
@@ -26,18 +26,18 @@
                 </label>
                 <label class="item item-input " id="sellTabDefaultPage-input2" name="Price">
                     <span class="input-label">Price</span>
-                    <input type="number" placeholder="Set a price">
+                    <input type="number" placeholder="Set a price" ng-model="input.price">
                 </label>
                 <label class="item item-input " id="sellTabDefaultPage-input8" name="Location">
                     <span class="input-label">Area</span>
-                    <input type="text" placeholder="Show Location">
+                    <input type="text" placeholder="Show Location" ng-model="input.area">
                 </label>
                 <label class="item item-input " id="sellTabDefaultPage-input9" name="City">
                     <span class="input-label">City</span>
-                    <input type="text" placeholder="Choose a City">
+                    <input type="text" placeholder="Choose a City" ng-model="input.city">
                 </label>
             </ion-list>
-            <button id="sellTabDefaultPage-button6" style="color:#080808;" class=" button button-energized  button-block icon ion-happy-outline ">SELL NOW</button>
+            <button id="sellTabDefaultPage-button6" style="color:#080808;" class=" button button-energized  button-block icon ion-happy-outline " ng-click="addListing()">SELL NOW</button>
         </form>
     </ion-content>
 </ion-view>

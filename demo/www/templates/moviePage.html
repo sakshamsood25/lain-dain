@@ -9,21 +9,14 @@
         <div id="moviePage-button-bar2" class=" button-bar ">
             <button id="moviePage-button11" class=" button button-positive  button-block button-clear ">Location</button>
             <button id="moviePage-button12" class=" button button-positive  button-block button-clear ">Category</button>
-            <button id="moviePage-button13" style="font-weight:300;" class=" button button-positive  button-block button-clear ">Sort/Filter</button>
+            <button id="moviePage-button13" style="font-weight:300;" class=" button button-positive  button-block button-clear " ng-click="getAllListings()">Sort/Filter</button>
+
         </div>
-        <ion-list id="moviePage-list6" class=" ">
-            <ion-item class="item-thumbnail-left  " id="moviePage-list-item10">
-                <h2>Item 1</h2>
-            </ion-item>
-            <ion-item class="item-thumbnail-left  " id="moviePage-list-item11">
-                <h2>Item 2</h2>
-            </ion-item>
-            <ion-item class="item-thumbnail-left  " id="moviePage-list-item12">
-                <h2>Item 3</h2>
-            </ion-item>
-            <ion-item class="item-thumbnail-left  " id="moviePage-list-item13">
-                <h2>Item 4</h2>
-            </ion-item>
-        </ion-list>
+         <ion-list can-swipe="true">
+      <ion-item ng-repeat="item in listings">
+        {{item.name}}
+      </ion-item>
+</ion-list>
+
     </ion-content>
 </ion-view>

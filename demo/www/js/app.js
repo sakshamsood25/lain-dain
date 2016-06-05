@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
+angular.module('app', ['ionic', 'backand', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,4 +20,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
       StatusBar.styleDefault();
     }
   });
+})
+.config(function (BackandProvider) {
+  BackandProvider.setAppName('laindain');
+  BackandProvider.setAnonymousToken('8d063606-9cc4-4949-99b2-7b961297e379');
 })
